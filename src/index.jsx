@@ -5,7 +5,7 @@ import data from "./data.js";
 // multiple selection
 
 export default function Accordion() {
-  var [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   function handleSingleSelection(getCurrentId) {
     setSelected(getCurrentId === selected ? null : getCurrentId);
@@ -15,7 +15,7 @@ export default function Accordion() {
 
   return (
     <div className="wrapper">
-      <div className="accordipon">
+      <div className="accordion">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
             <div className="item">
