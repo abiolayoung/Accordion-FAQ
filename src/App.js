@@ -1,4 +1,5 @@
 import './App.css';
+// import Accordion from './sample'
 import Accordion from './index.jsx'
 
 function App() {

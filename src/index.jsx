@@ -1,11 +1,14 @@
 import { useState } from "react";
 import data from "./data.js";
+import './style.css'
 
 // single selection
 // multiple selection
 
 export default function Accordion() {
   const [selected, setSelected] = useState(null);
+  const[enableMultiSelection, setEnableMultiSelection] = useState(false);
+  const[multiple, setMultiple] = useState([]);
 
   function handleSingleSelection(getCurrentId) {
     setSelected(getCurrentId === selected ? null : getCurrentId);
@@ -15,6 +18,7 @@ export default function Accordion() {
 
   return (
     <div className="wrapper">
+        <button>Enable Multi Selection</button>
       <div className="accordion">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
